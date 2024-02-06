@@ -1,0 +1,7 @@
+.CarsMain{
+    display: flex;
+    width: 100%;
+}
+.carsDiv{
+    width: 50%;
+}

@@ -6,7 +6,7 @@ const cars='/cars'
 const urls={
     cars:{
         base:cars,
-        byId: `${cars}/${id}`
+        byId: (id)=>`${cars}/${id}`
     }
 }
 export {baseUrlCars,urls}
