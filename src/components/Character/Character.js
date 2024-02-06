@@ -1,12 +1,15 @@
-const Character = ({characterItem}) => {
-    let {id, name,status,species,gender,image} = characterItem;
+import css from "./Character.module.css"
+const Character = ({characterItem,setDet}) => {
+    let { name,image} = characterItem;
     return (
-        <div>
-            <h2>{id}) {name}</h2>
-            <h3>status:{status}</h3>
-            <h3>species:{species}</h3>
-            <h3>gender: {gender}</h3>
-            <img src={image} alt={name}/>
+        <div className={css.characterDiv}>
+            <div className={css.blockAction}>
+                <h2> {name}</h2>
+                <button className={css.but} onClick={()=>setDet(characterItem)}>more info</button>
+            </div>
+            <img className={css.image} src={image} alt={name}/>
+
+
         </div>
     );
 };

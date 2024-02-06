@@ -1,0 +1,25 @@
+.characterDiv{
+    width: 80%;
+    font-family: 'Calibri', sans-serif;
+    font-style: italic;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    background-color: #92a9a9;
+
+}
+.blockAction{
+    width: 30%;
+}
+.image{
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.but{
+    width: 120px;
+    height: 30px;
+    font-weight: bold;
+    color: #367070;
+    border-radius: 10px;
+}
