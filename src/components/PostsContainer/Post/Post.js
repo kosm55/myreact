@@ -5,8 +5,9 @@ const Post = ({post,currPost}) => {
         <div className={css.Post}>
             <div>id : {id}</div>
             <h3>title : {title}</h3>
-            <button onClick={()=>currPost(post)}>Details</button>
+            <button className={css.button} onClick={()=>currPost(post)}>Details</button>
         </div>
+
     );
 };
 

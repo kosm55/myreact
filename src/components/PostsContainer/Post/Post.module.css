@@ -1,4 +1,12 @@
 .Post{
     width: 100%;
-    background-color: pink;
+    text-align: center;
+    justify-content: space-around;
+    margin: 20px;
+}
+.button{
+    width: 30%;
+    height: 30px;
+    background-color: #95b2b2;
+    border-radius: 30px;
 }

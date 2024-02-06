@@ -1,3 +1,10 @@
 .PostDetails{
     font-style: italic;
+    text-align: center;
+    background-color: grey;
+    padding: 20px;
+
+}
+.detailsDiv{
+    justify-content: space-between;
 }
