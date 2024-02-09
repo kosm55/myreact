@@ -10,6 +10,7 @@ const CommentForm = ({setComments}) => {
     let save=(data)=>{
         // console.log(data)
         commentService.create(data).then(({data})=>setComments(prev=>[...prev, data]))
+        reset()
     }
     return (
         <form onSubmit={handleSubmit(save)} className={css.form}>
