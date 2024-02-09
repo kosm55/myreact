@@ -1,0 +1,9 @@
+.comment{
+    border: 3px solid palevioletred;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+.text{
+    font-style: italic;
+}
