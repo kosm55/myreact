@@ -1,6 +1,6 @@
 import css from "./User.module.css"
 const User = ({user}) => {
-    const {id,name,username,email, address,phone,website,company} = user;
+    const {name,username,email, address,phone,website,company} = user;
     const {street,suite,city,zipcode,geo} = address;
     const {lat,lng} = geo;
     const {name:nameCompany,catchPhrase,bs} = company;
@@ -8,7 +8,6 @@ const User = ({user}) => {
     return (
         <div className={css.user}>
             <ul className={css.ul}>
-                <li>id: {id}</li>
                 <li>name: {name}</li>
                 <li>username: {username}</li>
                 <li>email: {email}</li>

@@ -5,15 +5,14 @@ import css from "./UserForm.module.css"
 const UserForm = ({setUs}) => {
     const {reset, register, handleSubmit} = useForm();
 
-    const save=(newUser)=>{
-        userService.create(newUser).then(({data})=> setUs(prev=>[...prev, data]))
+    const save=async (newUser)=>{
+       await userService.create(newUser).then(({data})=> setUs(prev=>[...prev, data]))
         reset()
     }
     return (
         <form onSubmit={handleSubmit(save)} className={css.form}>
             <label className={css.label}>
                 <h4>Enter user:</h4>
-                <input className={css.input} type="text" placeholder={'enter id'} {...register('id')}/>
                 <input  className={css.input} type="text" placeholder={'enter name'} {...register('name')}/>
                 <input  className={css.input} type="text" placeholder={'enter username'} {...register('username')}/>
                 <input  className={css.input} type="text" placeholder={'enter email'} {...register('email')}/>

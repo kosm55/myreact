@@ -1,3 +1,5 @@
+import {useForm} from "react-hook-form";
+
 const Car = ({car, setCarForUpdate, deleteCar}) => {
     const {id, brand, price, year} = car;
     return (
@@ -6,7 +8,7 @@ const Car = ({car, setCarForUpdate, deleteCar}) => {
             <div>brand: {brand}</div>
             <div>price: {price}</div>
             <div>year: {year}</div>
-            <button onClick={() => setCarForUpdate(car)}>update</button>
+            <button onClick={() =>setCarForUpdate(car)}>update</button>
             <button onClick={() => deleteCar(car.id)}>delete</button>
         </div>
     );

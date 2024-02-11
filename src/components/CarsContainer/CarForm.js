@@ -2,7 +2,7 @@ import {useForm} from "react-hook-form";
 import {carService} from "../../services/carService";
 import {useEffect} from "react";
 
-const CarForm = ({setTrigger,  carForUpdate}) => {
+const CarForm = ({setTrigger,  carForUpdate,setCarForUpdate}) => {
     const {reset, register, handleSubmit, formState: {isValid, errors}, setValue} = useForm({
         mode: 'all'
     });
@@ -23,6 +23,7 @@ const CarForm = ({setTrigger,  carForUpdate}) => {
         }
         setTrigger(prev => !prev)
         reset()
+        setCarForUpdate(null)
     }
 
 
@@ -44,7 +45,7 @@ const CarForm = ({setTrigger,  carForUpdate}) => {
                 min: {value: 1990, message: "min year - 1990"},
                 max: {value: new Date().getFullYear(), message: "max year - current"}
             })}/>
-            <button disabled={!isValid}>save</button>
+            <button disabled={!isValid}>{carForUpdate ? "update" : "save"}</button>
             {errors.brand && <div>{errors.brand.message}</div>}
             {errors.price && <div>{errors.price.message}</div>}
             {errors.year && <div>{errors.year.message}</div>}
