@@ -1,0 +1,16 @@
+.Comment{
+    height: 130px;
+    background-color: #d2d6d7;
+    margin-top: 10px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.button{
+    background-color: #748386;
+    width: 90px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+

@@ -1,3 +1,6 @@
+import {Outlet} from "react-router-dom";
+import {Header} from "../components/HeaderContainer/Header";
+
 const MainLayout = () => {
     return (
         <div>
@@ -13,7 +16,8 @@ const MainLayout = () => {
 
             {/*відображати ті чи інші маршрути можна на будь-якому рівні на ваш вибір.*/}
 
-            MainLayout
+            <Header/>
+            <Outlet/>
 
         </div>
     );
