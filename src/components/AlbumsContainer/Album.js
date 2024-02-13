@@ -4,7 +4,7 @@ const Album = ({album}) => {
     return (
         <div className={css.Album}>
             <div>album number: {id}</div>
-            <div>title: {title}</div>
+            <div>title:  {title}</div>
         </div>
     );
 };
