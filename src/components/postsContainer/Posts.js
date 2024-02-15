@@ -1,18 +1,22 @@
 import {useEffect, useState} from "react";
 import {useLocation} from "react-router-dom";
-import {postService} from "../../services/postService";
+
 import {Post} from "./Post";
+import {userService} from "../../services/userService";
+import css from"./Posts.module.css"
 
 
 const Posts = () => {
     const [posts, setPosts] = useState([])
-    const {state: {userDetails}} = useLocation();
+
+    const {state: {id}} = useLocation();
+
     useEffect(() => {
-        postService.getAll().then(({data})=>setPosts(data))
-    }, []);
-    console.log(posts)
+        userService.getPostsById(id).then(({data})=>setPosts(data))
+    }, [id]);
+
     return (
-        <div>
+        <div className={css.posts}>
             {posts.map(post=> <Post key={post.id} post={post}/>)}
         </div>
     );

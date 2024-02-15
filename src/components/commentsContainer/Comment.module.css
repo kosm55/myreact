@@ -1,0 +1,14 @@
+.comment{
+    width: 90%;
+    height: 80px;
+    border: 2px solid #1e1f22;
+    border-radius: 5px;
+    background-color: #bbb8b6;
+    color: #4d3b3b;
+    margin: 20px;
+    padding-left: 20px;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: bold;
+}

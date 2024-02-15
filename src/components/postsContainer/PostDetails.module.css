@@ -1,0 +1,14 @@
+.postDEtails{
+    width: 45%;
+    height: 200px;
+    border: 2px solid #1e1f22;
+    border-radius: 5px;
+    background-color: #bbb8b6;
+    color: #4d3b3b;
+    margin: 20px 20%;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}

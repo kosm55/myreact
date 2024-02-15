@@ -1,13 +1,16 @@
 import {useNavigate} from "react-router-dom";
 
+import css from "./User.module.css"
+
 const User = ({user}) => {
     const {id, name} = user;
+
     const navigate = useNavigate();
+
     return (
-        <div>
-            <div>id: {id}</div>
-            <div>name: {name}</div>
-            <button onClick={()=>navigate(user.id.toString(), {state: {user}})}>more about user</button>
+        <div className={css.user}>
+            <div>{id}) {name}</div>
+            <button className={css.button} onClick={()=>navigate(user.id.toString(), {state: {user}})}>more about user</button>
         </div>
     );
 };
