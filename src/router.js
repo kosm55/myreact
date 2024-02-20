@@ -1,8 +1,7 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
 
 import {MainLayout} from "./layouts";
-import {EpisodesPage} from "./pages";
-import {CharactersPage} from "./pages";
+import {EpisodesPage,CharactersPage} from "./pages";
 
 const router = createBrowserRouter([
     {
@@ -18,7 +17,6 @@ const router = createBrowserRouter([
             }
         ]
     }
-
 ]);
 
 export {

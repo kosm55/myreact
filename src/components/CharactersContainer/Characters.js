@@ -1,4 +1,4 @@
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 import {Character} from "./Character";
@@ -7,6 +7,7 @@ import {charactersService} from "../../services";
 
 const Characters = () => {
     const {state: {characters}} = useLocation();
+    const navigate = useNavigate();
 
     const [chapOne, setChapOne] = useState([])
     useEffect(() => {
@@ -15,6 +16,7 @@ const Characters = () => {
 
     return (
         <div>
+            <button onClick={()=>navigate(-1)}>back</button>
             {chapOne.map(character=><Character key={character.id} character={character}/>)}
         </div>
     );

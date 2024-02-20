@@ -4,7 +4,7 @@ const CharactersPage = () => {
 
     return (
         <div>
-            {<Characters />}
+            <Characters />
         </div>
     );
 };

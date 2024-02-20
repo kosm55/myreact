@@ -1,0 +1,18 @@
+.episodeDiv{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.buttonDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
