@@ -7,7 +7,7 @@ const Episode = ({episode}) => {
     const navigate = useNavigate();
 
     return (
-        <div  onClick={()=>navigate(`characters`, {state: {characters}})}  className={css.episode}>
+        <div  onClick={()=>navigate(`/characters`, {state: {characters}})}  className={css.episode}>
                 <div>id: {id}</div>
                 <div>name: {name}</div>
                 <div>chapter: {chapter}</div>
