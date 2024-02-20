@@ -15,7 +15,7 @@ const Characters = () => {
 
     return (
         <div>
-            {chapOne.map((character,index)=><Character key={character.id} character={character}/>)}
+            {chapOne.map(character=><Character key={character.id} character={character}/>)}
         </div>
     );
 };
