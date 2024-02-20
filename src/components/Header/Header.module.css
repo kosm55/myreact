@@ -1,0 +1,24 @@
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: teal;
+    color: #312d2d;
+}
+.Header a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #312d2d;
+}
+.Header a[class='active']{
+    color: snow;
+}
+.enterDiv{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 120px ;
+    height: 70px;
+    margin: 10px;
+    text-align: center;
+}
