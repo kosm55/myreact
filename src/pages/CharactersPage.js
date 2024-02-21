@@ -1,6 +1,7 @@
-import {Character, Characters} from "../components/CharactersContainer";
 import {useLocation, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
+
+import {Character} from "../components/CharactersContainer";
 import {charactersService} from "../services";
 import {useAppContext} from "../hooks";
 

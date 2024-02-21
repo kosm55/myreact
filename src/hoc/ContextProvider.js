@@ -1,6 +1,4 @@
-import {createContext, useEffect, useState} from "react";
-import {usePageQuery} from "../hooks/usePageQuery";
-import {episodesService} from "../services";
+import {createContext, useState} from "react";
 
 const Context = createContext(null);
 const ContextProvider = ({children}) => {

@@ -4,15 +4,12 @@ import {episodesService} from "../../services";
 import {Episode} from "./Episode";
 import css from "./Episodes.module.css"
 import {usePageQuery} from "../../hooks/usePageQuery";
-import {useAppContext} from "../../hooks";
 
 
 const Episodes = () => {
 
     const [episodes, setEpisodes] = useState({ prev: null, next: null, results: []})
     const {page, prevPage, nextPage} = usePageQuery();
-
-
 
 
     useEffect(() => {
