@@ -1,12 +1,11 @@
 import {Outlet} from "react-router-dom";
-
-import css from "./MainLayout.module.css"
+import {Header} from "../components/Header/Header";
 
 const MainLayout = () => {
     return (
         <div>
-            <div className={css.title}>Rick & Morty</div>
-            <div><Outlet/></div>
+            <Header/>
+            <Outlet/>
         </div>
     );
 };

@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     cursor: pointer;
+    font-family: sans-serif;
 }
 .buttonDiv{
     display: flex;

@@ -1,24 +1,22 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
-
 import {MainLayout} from "./layouts";
-import {EpisodesPage,CharactersPage} from "./pages";
+import {Episodes} from "./components/EpisodesContainer";
+import {CharactersPage, EpisodesPage} from "./pages";
 
 const router = createBrowserRouter([
     {
-        path: '', element: <MainLayout/>, children:[
+        path:'', element: <MainLayout/>, children: [
             {
-                index:true, element: <Navigate to={'episode'}/>
+                index:true, element: <Navigate to={'episodes'}/>
             },
             {
-                path:'episode', element: <EpisodesPage/>
+                path: 'episodes', element: <EpisodesPage/>
             },
             {
-                path:'characters', element: <CharactersPage/>
+                path: 'characters', element: <CharactersPage/>
             }
         ]
     }
 ]);
 
-export {
-    router
-}
+export {router}

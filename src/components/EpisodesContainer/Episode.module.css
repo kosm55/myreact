@@ -1,6 +1,6 @@
 .episode{
-    width: 23%;
+    width: calc(20% - 8px);
     border: 2px solid black;
     text-align: center;
-    margin: 0.8%;
+    margin: 2px;
 }
