@@ -1,4 +1,4 @@
-const baseURL='https://owu.linkpc.net/carsAPI/v2'
+const baseURL='http://owu.linkpc.net/carsAPI/v2'
 
 const auth='/auth'
 const cars='/cars'
