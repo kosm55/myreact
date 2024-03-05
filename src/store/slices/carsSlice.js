@@ -13,13 +13,14 @@ const carsSlice= createSlice({
         createCar: (state, action) =>{
             state.cars.push(action.payload)
         },
-        // updateCar: (state, action) =>{
-        //     state.cars=state.cars.map(item=> {
-        //         if (item.id===action.payload.id){
-        //
-        //         }
-        //     })
-        // },
+        updateCar: (state, action) =>{
+            state.cars=state.cars.map(item=> {
+                if (item.id===action.payload.id){
+                     return action.payload
+                }
+                return item
+            })
+        },
         deleteCar: (state, action) =>{
             state.cars= state.cars.filter((item)=>item.id !== action.payload)
         }

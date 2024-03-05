@@ -5,12 +5,12 @@ import {carService} from "../services";
 import {carsAction} from "../store";
 
 const CarForm = () => {
-    const {register,handleSubmit, reset} = useForm();
+    const {register,handleSubmit, reset, setValue} = useForm();
     const dispatch = useDispatch();
 
 
-    const save=(car)=>{
-        carService.create(car).then(({data})=> dispatch(carsAction.createCar(data)))
+    const save= async  (car)=>{
+        await carService.create(car).then(({data})=> dispatch(carsAction.createCar(data)))
         reset()
     }
 
