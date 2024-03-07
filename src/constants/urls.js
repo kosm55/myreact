@@ -6,7 +6,7 @@ const episodes= '/episode'
 const urls={
     characters: {
         base: characters,
-        byId: (id)=> `${characters}/${id}`
+        byId: (ids)=> `${characters}/${ids}`
     },
     episodes: {
         base: episodes,

@@ -11,9 +11,10 @@ const Characters = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    const ids=characters.map(item=> item.substring(42))
 
     useEffect(() => {
-        dispatch(charactersAction.getByIdCharacter(characters.map(item=> item.substring(42))))
+        dispatch(charactersAction.getByIdCharacter(ids))
     }, [dispatch, characters]);
 
 

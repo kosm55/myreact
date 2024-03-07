@@ -3,7 +3,7 @@ import {urls} from "../constants";
 
 const charactersService={
     // getAll: ()=> apiService.get(urls.characters.base)
-    getById: (id)=> apiService.get(urls.characters.byId(id))
+    getById: (ids)=> apiService.get(urls.characters.byId(ids))
 }
 
 export {
