@@ -9,7 +9,7 @@ const initialState ={
 
 const getAll= createAsyncThunk(
     'episodesSlice/getAll',
-    async (page, thunkAPI)=>{
+    async ({page}, thunkAPI)=>{
         try {
             const {data} = await episodesService.getAll(page);
             return data
