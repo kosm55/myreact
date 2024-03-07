@@ -14,7 +14,7 @@ const Characters = () => {
     const ids=characters.map(item=> item.substring(42))
 
     useEffect(() => {
-        dispatch(charactersAction.getByIdCharacter(ids))
+        dispatch(charactersAction.getByIdCharacter({ids}))
     }, [dispatch, characters]);
 
 

@@ -7,17 +7,17 @@ const initialState = {
 
 const getByIdCharacter= createAsyncThunk(
     'charactersSlice/getById',
-    async (ids, thunkAPI)=>{
+    async ({ids}, thunkAPI)=>{
         try {
             const {data} = await charactersService.getById(ids);
             return data
+
         }catch (e){
             const error=e.response.data
             return thunkAPI.rejectWithValue(error)
         }
     }
 )
-
 const charactersSlice = createSlice({
     name: 'charactersSlice',
     initialState,
