@@ -1,0 +1,15 @@
+.Character{
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+}
+.Info{
+    width: 60%;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 50px;
+}
+.Character img{
+    border-radius: 50%;
+}
