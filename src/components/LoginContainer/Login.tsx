@@ -1,34 +1,32 @@
 import {SubmitHandler, useForm} from "react-hook-form";
-
 import {IAuth} from "../../interfaces";
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {authAction} from "../../redux";
 import {useNavigate} from "react-router-dom";
 
-const Register = () => {
-    let {register,handleSubmit} = useForm<IAuth>();
+const Login = () => {
+    const {register, handleSubmit} = useForm<IAuth>();
     const dispatch = useAppDispatch();
-    const {registerError} = useAppSelector(state => state.auth);
     const navigate = useNavigate();
+    const {loginError} = useAppSelector(state => state.auth);
 
-    const reg:SubmitHandler<IAuth>=async (user)=>{
-        const {meta: {requestStatus}}= await dispatch(authAction.register({user}));
-        if (requestStatus==='fulfilled'){
-            navigate('/login')
+    const login: SubmitHandler<IAuth> = async (user) => {
+        const {meta: {requestStatus}} = await dispatch(authAction.login({user}));
+        if (requestStatus === 'fulfilled') {
+            navigate('/cars')
         }
-    }
-
+    };
     return (
         <div>
-            {registerError && <h5>{registerError}</h5>}
-            <form onSubmit={handleSubmit(reg)}>
+            {loginError && <h5>{loginError}</h5>}
+            <form onSubmit={handleSubmit(login)}>
                 <input type="text" placeholder={'username'} {...register('username')}/>
                 <input type="text" placeholder={'password'} {...register('password')}/>
-                <button>register</button>
+                <button>login</button>
             </form>
         </div>
 
     );
 };
 
-export {Register};
+export {Login};
